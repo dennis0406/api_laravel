@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+.name {
+    text-decoration: none;
+    color: #141414;
+}
+
+* {
+    font-family: "PT Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.price {
+    color: red;
+}
+.price::after {
+    content: "\20AB";
+    color: red;
+}
+.record{
+    box-shadow: 0 0 10px #000000a2;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.cate
+.cate{
+    font-size: 25px;
+    color: #141414;
+}

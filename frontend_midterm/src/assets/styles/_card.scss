@@ -1,0 +1,33 @@
+.card{
+  width: 400px;
+  height: auto;
+  &__img{
+    width: 90%;
+  }
+  &__price::after{
+    content: "\20AB    ";
+    color: var(--cl-title);
+    font-weight: bold;
+  }
+  &__price{
+    color: var(--cl-title);
+    font-weight: bold;
+    padding: 4px;
+  }
+&__btn{
+  text-decoration: none;
+  background: var(--cl-title);
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #ffff;
+}
+}
+
+// Show card
+.product__list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
