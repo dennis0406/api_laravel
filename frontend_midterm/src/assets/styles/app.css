@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
 :root {
   --text-cl: #000000;
   --primary-bg: #f1eeee;
@@ -7,6 +8,10 @@
   --fz-text: 18px;
   --cl-title: #ce2a2a;
   --text-muted-cl: #777070;
+}
+
+body {
+  font-family: "PT Mono", monospace;
 }
 
 .nav--top ul {
@@ -42,6 +47,7 @@
 .card {
   width: 400px;
   height: auto;
+  text-align: center;
 }
 .card__img {
   width: 90%;
@@ -70,6 +76,18 @@
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.search {
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
 }
 
 *,

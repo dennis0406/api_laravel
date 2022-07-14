@@ -14,29 +14,6 @@ class APIController extends Controller
                 ->get();
         return $result;
     }
-    public function detail(Product $product){
-        return $product;
-    }
-    public function create(Request $request)
-    {
-        $product = Product::create($request->all());
-
-        return response()->json($product, 201);
-    }
-
-    public function update(Request $request, Product $product)
-    {
-        $product->update($request->all());
-
-        return response()->json($product, 200);
-    }
-
-    public function delete(Product $product)
-    {
-        $product->delete();
-
-        return response()->json(null, 204);
-    }
 
     public function searchByName(Request $request)
     {
@@ -55,7 +32,7 @@ class APIController extends Controller
     {
         if($request->price == null)
         {
-            return DB::all();
+            return Product::all();
         }
         $result = DB::table('products')
                 ->where('price', '<=',$request->price)

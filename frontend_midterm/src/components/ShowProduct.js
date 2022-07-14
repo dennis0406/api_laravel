@@ -4,7 +4,7 @@ import { CardProduct } from "./CardProduct";
 
 export const ShowProduct = () => {
   const [listProduct, setListProduct] = useState([]);
-
+  const [isFilter, setIsFilter] = useState(false);
   useEffect(() => {
     axios
       .get(`http://127.0.0.1:8000/api/products`)
@@ -43,17 +43,18 @@ export const ShowProduct = () => {
       <input
         type="text"
         className="search"
+        placeholder="Search..."
         onChange={(e) => {
           handleSearch(e);
         }}
       />
-      <label htmlFor="price">Choose a price:</label>
 
-      <select name="price" id="price" onChange={(e)=>{searchPrice(e)}}>
-        <option value="50000">50.000vnd</option>
-        <option value="100000">100.000vnd</option>
-        <option value="300000">300.000vnd</option>
-        <option value="500000">500.000vnd</option>
+      <select onChange={(e)=>{searchPrice(e)}}>
+        <option value="0">Filter by price</option>
+        <option value="50000"> &#60;50.000vnd</option>
+        <option value="100000">&#60;100.000vnd</option>
+        <option value="300000">&#60;300.000vnd</option>
+        <option value="500000">&#60;500.000vnd</option>
       </select>
 
       <div className="product__list">
